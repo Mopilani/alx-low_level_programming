@@ -2,29 +2,32 @@
 #include <time.h>
 #include <stdio.h>
 
+/* This program will assign a random number to the variable */
+
 /**
- * This program will assign a random number to the variable n each
- * time it is executed. Complete the source code in order to print
- * whether the number stored in the variable n is positive or
- * negative.
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n;
+	int n, d;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 0)
+
+	d = n % 10;
+	if (d > 5)
 	{
-		printf("%d is positive", n);
+		printf("Last digit of %d is %d and is greater than 5", n, d);
 	}
-	else if (n < 0)
+	else if (d < 0)
 	{
-		printf("%d is negative", n);
+		printf("Last digit of %d is %d less than 6 and not 0", n, d);
 	}
 	else
 	{
-		printf("%d is zero", n);
+		printf("Last digit of %d is 0 and is 0", n);
 	}
 	putchar('\n');
 	return (0);
