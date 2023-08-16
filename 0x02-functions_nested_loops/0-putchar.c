@@ -1,4 +1,4 @@
-#include<main.h>
+#include "main.h"
 
 /* This program will assign a random number to the variable */
 
