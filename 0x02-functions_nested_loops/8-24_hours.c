@@ -1,8 +1,11 @@
 #include"main.h"
 
 /**
- * mopilani- prints every minute of the day
-*/
+ * jack_bauer - Entry point.
+ * Description:  function that prints every minute
+ * of the day of Jack Bauer, starting from 00:00 to 23:59
+ * Return: Alwayes (0).
+ */
 
 void jack_bauer(void)
 {
