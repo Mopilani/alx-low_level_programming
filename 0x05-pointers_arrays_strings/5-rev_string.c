@@ -1,21 +1,26 @@
-#include"main.h"
-
 /**
- * puts2 - prints every character of a string
+ * rev_string - reverses a string
  *
- * @str: string parameter input
+ * @s: string parameter input
  *
- * Return: Noting
+ * Return: Nothing
 */
 
-void puts2(char *str)
+void rev_string(char *s)
 {
-	int i;
+	int l, i;
+	char ch;
 
-	for (i = 0; str[i] != '\0'; ++i)
+	/*find string length without null char*/
+	for (l = 0; s[l] != '\0'; ++l)
+		;
+
+	/*swap the string by looping to half the string*/
+	for (i = 0; i < l / 2; ++i)
 	{
-		if (i % 2 == 0)
-			_putchar(str[i]);
+		ch = s[i];
+		s[i] = s[l - 1 - i]; /*-1 because the array starts from 0*/
+		s[l - 1 - i] = ch;
 	}
-	_putchar('\n');
+
 }
